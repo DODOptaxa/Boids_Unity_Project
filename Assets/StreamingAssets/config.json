@@ -1,0 +1,19 @@
+{
+  "Radius": 25,
+  "xPhase": 0.55,
+  "yPhase": 0.4,
+  "zPhase": 0.1,
+
+  "Numboids": 100,
+  "SpawRadius": 100,
+  "SpawnDelay": 0.1,
+  "Velocity": 65,
+  "NeighborDist": 25,
+  "CollDist": 50,
+  "VelMatching": 0.25,
+  "FlockCentering": 0.2,
+  "CollAvoid": 0.2,
+  "AttractPull": 2,
+  "AttractPush": 2,
+  "AttractPushDist": 5
+}

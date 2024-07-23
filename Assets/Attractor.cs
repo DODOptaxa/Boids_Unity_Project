@@ -6,13 +6,19 @@ using UnityEngine;
 
 public class Attractor : MonoBehaviour
 {   static public Vector3 POS = Vector3.zero;
-    public int num = 0;
-    [Header("Set in Inspector")]
-    public float radius = 10;
-    public float xPhase = 0.5f;
-    public float yPhase = 0.4f;
-    public float zPhase = 0.1f;
 
+    public float radius ;
+    public float xPhase ;
+    public float yPhase ;
+    public float zPhase ;
+
+    private void Start()
+    {
+        radius = Spawner.S.jsonFile.Radius ;
+        xPhase = Spawner.S.jsonFile.xPhase ;
+        yPhase = Spawner.S.jsonFile.yPhase ;
+        zPhase = Spawner.S.jsonFile.zPhase ;
+    }
     private void Update()
     {
         if (Input.GetKey(KeyCode.A))
@@ -40,7 +46,6 @@ public class Attractor : MonoBehaviour
     }
     void FixedUpdate()
     {
-        num++;
         Vector3 tPos = GOpos;
         Vector3 scale = this.transform.localScale;
         tPos.x = Mathf.Sin(xPhase * Time.time) * radius * scale.x;
